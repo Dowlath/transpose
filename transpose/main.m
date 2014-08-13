@@ -17,7 +17,7 @@ int main(int argc, const char * argv[])
         
         
        int  b[3][3]=
-        { {0,3,1},{2,0,2},{3,2,0}};
+        { {9,3,1},{2,5,2},{3,2,7}};
         int c[3][3];
         
 //        
@@ -36,9 +36,14 @@ int main(int argc, const char * argv[])
             
             for(int j=0;j<3;j++)
             {
-               a[0][0]=0;
-                a[1][1]=0;
-               a[2][2]=0;
+                if (i==j) {
+                    a[i][j]=0;
+                }
+                else
+                
+                //a[0][0]=0;
+//                a[1][1]=0;
+//               a[2][2]=0;
                 NSLog(@" the number of a is %d",a[i][j]);
                 
                 
@@ -59,9 +64,15 @@ int main(int argc, const char * argv[])
             
             for(int j=0;j<3;j++)
             {
-                b[0][0]=0;
-                b[1][1]=0;
-               b[2][2]=0;
+                if (i==j)
+                    
+                {
+                    b[i][j]=0;
+                }
+//                b[0][0]=0;
+//                b[1][1]=0;
+//               b[2][2]=0;
+                else
                 NSLog(@" the number of b is %d",b[i][j]);
                 
                 
@@ -79,9 +90,6 @@ int main(int argc, const char * argv[])
             
             for(int j=0;j<3;j++)
             {
-//                c[0][0]=0;
-//                c[1][1]=0;
-//                c[2][2]=0;
                 NSLog(@" the answer is %d",c[i][j]);
                 
                 
